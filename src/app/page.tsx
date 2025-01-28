@@ -299,10 +299,10 @@ const wfSections: ISection[] = [
 ];
 
 const typeOfSections = [
-  ['Pile Section', pileSections],
+  ['Pipe Section', pileSections],
   ['Light Lip Channel Section', lightLipChannalSections],
   ['Rectangular Tube Section', rectangularTubeSections],
-  ['Light Channel Section', lightChannelSections],
+  ['Channel Bar Section', lightChannelSections],
   ['I Section', iSections],
   ['WF Section', wfSections],
 ] as const;
