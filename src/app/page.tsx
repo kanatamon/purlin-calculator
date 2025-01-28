@@ -1103,11 +1103,11 @@ const ResultOfCalculationView = ({ form }: { form: UseFormReturn<z.infer<typeof 
       </div>
       <div>
         <FormLabel>Moment Of Mx</FormLabel>
-        <NumberField disabled value={getMomentOfMx()} unit={'kg./-m.'} decimalScale={2} />
+        <NumberField disabled value={getMomentOfMx()} unit={'kg.-m.'} decimalScale={2} />
       </div>
       <div>
         <FormLabel>Moment Of My</FormLabel>
-        <NumberField disabled value={getMomentOfMy()} unit={'kg./-m.'} decimalScale={2} />
+        <NumberField disabled value={getMomentOfMy()} unit={'kg.-m.'} decimalScale={2} />
       </div>
       <div>
         <FormLabel>Deflextion (∆/IE)</FormLabel>
