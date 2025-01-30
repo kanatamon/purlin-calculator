@@ -632,7 +632,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     const [name, trialSectionTable] = typeOfSection;
     const trialSectionData = trialSectionTable[trialSectionNo - 1];
 
-    if (name === 'Pile Section') {
+    if (name === 'Pipe Section') {
       const result = trialSectionData[1];
       invariant(typeof result === 'number', 'Invalid thick web');
       return result;
@@ -647,7 +647,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
       invariant(typeof result === 'number', 'Invalid thick web');
       return result;
     }
-    if (name === 'Light Channel Section') {
+    if (name === 'Channel Bar Section') {
       const result = trialSectionData[3];
       invariant(typeof result === 'number', 'Invalid thick web');
       return result;
@@ -670,7 +670,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     const [name, trialSectionTable] = typeOfSection;
     const trialSectionData = trialSectionTable[trialSectionNo - 1];
 
-    if (name === 'Pile Section') {
+    if (name === 'Pipe Section') {
       const result = trialSectionData[1];
       invariant(typeof result === 'number', 'Invalid thick flange');
       return result;
@@ -685,7 +685,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
       invariant(typeof result === 'number', 'Invalid thick flange');
       return result;
     }
-    if (name === 'Light Channel Section') {
+    if (name === 'Channel Bar Section') {
       const result = trialSectionData[4];
       invariant(typeof result === 'number', 'Invalid thick flange');
       return result;
@@ -708,7 +708,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     const [name, trialSectionTable] = typeOfSection;
     const trialSectionData = trialSectionTable[trialSectionNo - 1];
 
-    if (name === 'Pile Section') {
+    if (name === 'Pipe Section') {
       return trialSectionData[3];
     }
     if (name === 'Light Lip Channel Section') {
@@ -717,7 +717,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     if (name === 'Rectangular Tube Section') {
       return trialSectionData[5];
     }
-    if (name === 'Light Channel Section') {
+    if (name === 'Channel Bar Section') {
       return trialSectionData[6];
     }
     if (name === 'I Section') {
@@ -734,7 +734,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     const [name, trialSectionTable] = typeOfSection;
     const trialSectionData = trialSectionTable[trialSectionNo - 1];
 
-    if (name === 'Pile Section') {
+    if (name === 'Pipe Section') {
       return trialSectionData[2];
     }
     if (name === 'Light Lip Channel Section') {
@@ -743,7 +743,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     if (name === 'Rectangular Tube Section') {
       return trialSectionData[4];
     }
-    if (name === 'Light Channel Section') {
+    if (name === 'Channel Bar Section') {
       return trialSectionData[5];
     }
     if (name === 'I Section') {
@@ -761,13 +761,13 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     const trialSectionData = trialSectionTable[trialSectionNo - 1];
 
     let result: number | undefined;
-    if (name === 'Pile Section') {
+    if (name === 'Pipe Section') {
       result = trialSectionData[5];
     } else if (name === 'Light Lip Channel Section') {
       result = trialSectionData[9];
     } else if (name === 'Rectangular Tube Section') {
       result = trialSectionData[8];
-    } else if (name === 'Light Channel Section') {
+    } else if (name === 'Channel Bar Section') {
       result = trialSectionData[9];
     } else if (name === 'I Section') {
       result = trialSectionData[9];
@@ -786,13 +786,13 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     const trialSectionData = trialSectionTable[trialSectionNo - 1];
 
     let result: number | undefined;
-    if (name === 'Pile Section') {
+    if (name === 'Pipe Section') {
       result = trialSectionData[4];
     } else if (name === 'Light Lip Channel Section') {
       result = trialSectionData[7];
     } else if (name === 'Rectangular Tube Section') {
       result = trialSectionData[6];
-    } else if (name === 'Light Channel Section') {
+    } else if (name === 'Channel Bar Section') {
       result = trialSectionData[7];
     } else if (name === 'I Section') {
       result = trialSectionData[7];
@@ -810,7 +810,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     const [name, trialSectionTable] = typeOfSection;
     const trialSectionData = trialSectionTable[trialSectionNo - 1];
 
-    if (name === 'Pile Section') {
+    if (name === 'Pipe Section') {
       return trialSectionData[6];
     }
     if (name === 'Light Lip Channel Section') {
@@ -819,7 +819,7 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     if (name === 'Rectangular Tube Section') {
       return Math.min(trialSectionData[10] ?? 0, trialSectionData[11] ?? 0);
     }
-    if (name === 'Light Channel Section') {
+    if (name === 'Channel Bar Section') {
       return Math.min(trialSectionData[11] ?? 0, trialSectionData[12] ?? 0);
     }
     if (name === 'I Section') {
@@ -837,13 +837,13 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     const trialSectionData = trialSectionTable[trialSectionNo - 1];
 
     let result: number | undefined;
-    if (name === 'Pile Section') {
+    if (name === 'Pipe Section') {
       result = trialSectionData[5];
     } else if (name === 'Light Lip Channel Section') {
       result = trialSectionData[8];
     } else if (name === 'Rectangular Tube Section') {
       result = trialSectionData[7];
-    } else if (name === 'Light Channel Section') {
+    } else if (name === 'Channel Bar Section') {
       result = trialSectionData[8];
     } else if (name === 'I Section') {
       result = trialSectionData[8];
@@ -862,13 +862,13 @@ const usePurlinComputations = ({ form }: { form: UseFormReturn<z.infer<typeof fo
     const trialSectionData = trialSectionTable[trialSectionNo - 1];
 
     let result: number | undefined;
-    if (name === 'Pile Section') {
+    if (name === 'Pipe Section') {
       result = trialSectionData[5];
     } else if (name === 'Light Lip Channel Section') {
       result = trialSectionData[10];
     } else if (name === 'Rectangular Tube Section') {
       result = trialSectionData[9];
-    } else if (name === 'Light Channel Section') {
+    } else if (name === 'Channel Bar Section') {
       result = trialSectionData[10];
     } else if (name === 'I Section') {
       result = trialSectionData[10];
