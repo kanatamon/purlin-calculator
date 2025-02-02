@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils';
-import { ReactNode, useState } from 'react';
-import { NumericFormat } from 'react-number-format';
+import { cn } from "@/lib/utils";
+import { ReactNode, useState } from "react";
+import { NumericFormat } from "react-number-format";
 
 interface NumberFieldProps {
   unit?: ReactNode;
@@ -13,15 +13,22 @@ interface NumberFieldProps {
   value?: string | number | null;
 }
 
-export function NumberField({ value, unit, decimalScale = 0, placeholder, className, ...props }: NumberFieldProps) {
+export function NumberField({
+  value,
+  unit,
+  decimalScale = 0,
+  placeholder,
+  className,
+  ...props
+}: NumberFieldProps) {
   const [focused, setFocused] = useState(false);
   return (
     <div className={className}>
       <div
         className={cn(
-          'flex items-center mt-1 border rounded-md border-input bg-transparent px-3 py-2 text-sm shadow-sm',
-          props.disabled && 'cursor-not-allowed opacity-50',
-          focused && 'outline'
+          "flex items-center mt-1 border rounded-md border-input bg-transparent px-3 py-2 text-sm shadow-sm border-blue-500",
+          props.disabled && "cursor-not-allowed opacity-50 border-revert",
+          focused && "outline"
         )}
       >
         <NumericFormat
@@ -43,7 +50,11 @@ export function NumberField({ value, unit, decimalScale = 0, placeholder, classN
             props.onBlur?.();
           }}
         />
-        {unit && <span className="inline-flex items-center text-muted-foreground text-sm pl-2 shrink-0">{unit}</span>}
+        {unit && (
+          <span className="inline-flex items-center text-muted-foreground text-sm pl-2 shrink-0">
+            {unit}
+          </span>
+        )}
       </div>
     </div>
   );
