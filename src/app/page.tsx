@@ -1676,7 +1676,9 @@ const DataForDesignForm = ({
         name="typeOfSagRod"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Type of Sag Rod</FormLabel>
+            <FormLabel>
+              1. Type of Sag Rod(ลักษณะการใส่เหล็กท่อนกันโก่ง)
+            </FormLabel>
             <Select onValueChange={field.onChange} value={field.value}>
               <FormControl>
                 <SelectTrigger>
@@ -1685,13 +1687,13 @@ const DataForDesignForm = ({
               </FormControl>
               <SelectContent>
                 <SelectItem value="1">
-                  1. Not To Use Sag Rod For This Member
+                  1. Not To Use Sag Rod For This Member(ไม่ใส่)
                 </SelectItem>
                 <SelectItem value="2">
-                  2. This Member Use Sag Rod At Middle Span
+                  2. This Member Use Sag Rod At Middle Span(ใส่ช่องกลาง)
                 </SelectItem>
                 <SelectItem value="3">
-                  3. This Member Use Sag Rod At Range L/3 Of Span
+                  3. This Member Use Sag Rod At Range L/3 Of Span(ใส่ทุกL/3)
                 </SelectItem>
               </SelectContent>
             </Select>
@@ -1704,7 +1706,9 @@ const DataForDesignForm = ({
         name="spanLength"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Span Length (L.)</FormLabel>
+            <FormLabel>
+              2. Span Length (L.)(ความยาวช่วงแป(จุดรองรับ - จุดรองรับ))
+            </FormLabel>
             <FormControl>
               <NumberField {...field} unit={"m."} decimalScale={2} />
             </FormControl>
@@ -1717,7 +1721,7 @@ const DataForDesignForm = ({
         name="rangeOfPurlin"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Range of Purlin</FormLabel>
+            <FormLabel>3. Range of Purlin(ระยะระหว่างแป - แป)</FormLabel>
             <FormControl>
               <NumberField {...field} unit={"m."} decimalScale={2} />
             </FormControl>
@@ -1730,7 +1734,7 @@ const DataForDesignForm = ({
         name="slopeOfRoof"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Slope of Roof (θ)</FormLabel>
+            <FormLabel>4. Slope of Roof (θ)(มุมลาดเอียงของหลังคา)</FormLabel>
             <FormControl>
               <NumberField {...field} unit={"degree"} decimalScale={2} />
             </FormControl>
@@ -1743,7 +1747,10 @@ const DataForDesignForm = ({
         name="weightOfTiles"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Weight of Tiles</FormLabel>
+            <FormLabel>
+              Weight of
+              Tiles(น้ำหนักทั้งหมดที่ถ่ายลงหลังคา(รวมน้ำหนักวัสดุมุงหลังคา))
+            </FormLabel>
             <FormControl>
               <NumberField
                 {...field}
@@ -1764,7 +1771,7 @@ const DataForDesignForm = ({
         name="liveLoad"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Live Load (LL.)</FormLabel>
+            <FormLabel>Live Load (LL.)(น้ำหนักจรที่ใช้)</FormLabel>
             <FormControl>
               <NumberField
                 {...field}
@@ -1785,7 +1792,7 @@ const DataForDesignForm = ({
         name="windLoad"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Wind Load (WL.)</FormLabel>
+            <FormLabel>Wind Load (WL.)(แรงลมที่กระทำต่อหลังคา)</FormLabel>
             <FormControl>
               <NumberField
                 {...field}
@@ -1806,7 +1813,7 @@ const DataForDesignForm = ({
         name="useSelfWeight"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Use Self Weight</FormLabel>
+            <FormLabel>Use Self Weight(นำหนักตายตัวของโครงสร้าง)</FormLabel>
             <FormControl>
               <NumberField
                 {...field}
@@ -2757,7 +2764,7 @@ const RecheckAllowableStressOnSection = ({
         Part IV: Select Type & Section Of Steel
       </h2>
       <div>
-        <FormLabel>Actual Bending Stress</FormLabel>
+        <FormLabel>Actual Bending Stress(ค่าความเค้นดัด)</FormLabel>
         <NumberField
           disabled
           value={getActualBendingStress()}
@@ -2774,7 +2781,7 @@ const RecheckAllowableStressOnSection = ({
         )}
       </div>
       <div>
-        <FormLabel>Actual Deflextion</FormLabel>
+        <FormLabel>Actual Deflextion(การโก่งตัวของโครงสร้างแป)</FormLabel>
         <NumberField
           disabled
           value={getActualDeflextion()}
@@ -2792,7 +2799,7 @@ const RecheckAllowableStressOnSection = ({
         )}
       </div>
       <div>
-        <FormLabel>Actual Self Weight</FormLabel>
+        <FormLabel>Actual Self Weight(น้ำหนักของโครงสร้างแป)</FormLabel>
         <NumberField
           disabled
           value={getWeightOfSection()}
@@ -2810,7 +2817,7 @@ const RecheckAllowableStressOnSection = ({
         )}
       </div>
       <div>
-        <FormLabel>Actual Sect. Modulus</FormLabel>
+        <FormLabel>Actual Sect. Modulus(คุณสมบัติของหน้าตัดเหล็ก)</FormLabel>
         <NumberField disabled value={getActualSectModulus()} decimalScale={2} />
         {getValidatedSectModulus().status === "success" ? (
           <FormMessage className="text-green-500">
